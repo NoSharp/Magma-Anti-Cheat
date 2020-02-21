@@ -27,7 +27,6 @@ namespace Oxide.Plugins
 
         void OnRocketLaunched(BasePlayer player, BaseEntity entity)
         {
-            //if (player.userID != 76561198880912497U && player.userID != 76561198171821322U) return;
             if (!LastReloads.ContainsKey(player.userID)) return;
             int diff = TimeSinceEpoch() - LastReloads[player.userID];
             if (diff < 5)
